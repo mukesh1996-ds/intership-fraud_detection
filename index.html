@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title> FRAUD PREDICTION </title>
+</head>
+<body>
+<h1> Check the type of transaction </h1>
+<!-- Main Input For Receiving Query to our ML -->
+<form action="/predict" method = "post">
+<h4>
+    <input type="text" name="customer_Id" placeholder="enter the customer Id" required="required" />
+    <input type="text" name="age" placeholder="enter the customer agge" required="required" />
+    <select name="gender" id="gender" required="required" class="form-control">
+        <option> select your gender </option>
+        <option value="0">Male</option>
+        <option value="1">female </option>
+        <option value="2">transgender</option>
+        <option value="3">not disclosed </option>
+    </select>
+
+    <input type="text" name="Merchant" placeholder="enter the Merchant Id" required="required" />
+    <input type="text" name="Category" placeholder="enter the Category Id" required="required" />
+    <input type="text" name="amount" placeholder="enter the amount" required="required" />
+
+    <br>
+    <br>
+    <button type="submit" class="check for fraud transaction">Predict</button>
+    <br>
+    <h4 align="center">{{pred}}</h4>
+    </center>
+</form>
+</body>
+</html>
